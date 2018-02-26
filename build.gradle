@@ -12,7 +12,7 @@ plugins {
     id "com.github.hierynomus.license" version "0.13.1"
 }
 
-group 'io.mifos.tools'
+group 'org.apache.fineract.cn'
 version '0.1.0-BUILD-SNAPSHOT'
 
 apply plugin: 'java'
