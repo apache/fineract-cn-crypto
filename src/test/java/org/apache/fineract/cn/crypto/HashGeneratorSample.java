@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package io.mifos.tool.crypto;
+package org.apache.fineract.cn.crypto;
 
-import io.mifos.tool.crypto.config.EnableCrypto;
+import org.apache.fineract.cn.crypto.config.EnableCrypto;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

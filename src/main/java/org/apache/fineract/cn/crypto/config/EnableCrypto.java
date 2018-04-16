@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package io.mifos.tool.crypto.config;
+package org.apache.fineract.cn.crypto.config;
 
 import org.springframework.context.annotation.Import;
 

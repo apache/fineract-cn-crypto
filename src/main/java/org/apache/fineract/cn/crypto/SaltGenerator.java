@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package io.mifos.tool.crypto;
+package org.apache.fineract.cn.crypto;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.Base64Utils;

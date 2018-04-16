@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package io.mifos.tool.crypto.config;
+package org.apache.fineract.cn.crypto.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ import org.springframework.context.annotation.FilterType;
 @Configuration
 @ComponentScan(
     basePackages = {
-        "io.mifos.tool.crypto"
+        "org.apache.fineract.cn.crypto"
     },
     excludeFilters = {
         @ComponentScan.Filter(
