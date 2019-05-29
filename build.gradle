@@ -124,5 +124,5 @@ rat {
             "src/test/resources/.salt",
             "src/test/resources/.secret"
     ]
-
+    plainOutput = true
 }
