@@ -1,4 +1,4 @@
-# Apache Fineract CN Crypto Tools [![Build Status](https://api.travis-ci.com/apache/fineract-cn-crypto.svg?branch=develop)](https://travis-ci.com/apache/fineract-cn-crypto)
+# Apache Fineract CN Crypto Tools [![Build Status](https://api.travis-ci.com/apache/fineract-cn-crypto.svg?branch=0.1.x)](https://travis-ci.com/apache/fineract-cn-crypto)
 
 ## Abstract
 Utility component to create random salts and hash credentials.
