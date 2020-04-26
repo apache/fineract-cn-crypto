@@ -26,9 +26,9 @@ buildscript {
 }
 
 plugins {
-    id "com.github.hierynomus.license" version "0.13.1"
-    id("org.nosphere.apache.rat") version "0.3.1"
-    id "com.jfrog.artifactory" version "4.9.5"
+    id 'com.github.hierynomus.license' version '0.15.0'
+    id 'org.nosphere.apache.rat' version '0.6.0'
+    id 'com.jfrog.artifactory' version '4.15.1'
     id 'maven-publish'
     id 'idea'
     id 'java'
@@ -47,13 +47,13 @@ repositories {
 }
 
 ext.versions = [
-        spring        : '4.3.2.RELEASE',
-        springsecurity: '4.0.2.RELEASE',
-        logback       : '1.1.3',
-        slf4j         : '1.7.13',
-        findbugs      : '3.0.1',
-        junit         : '4.12',
-        springtest    : '4.3.2.RELEASE'
+        spring        : '5.2.5.RELEASE',
+        springsecurity: '5.3.1.RELEASE',
+        logback       : '1.2.3',
+        slf4j         : '1.7.30',
+        findbugs      : '3.0.2',
+        junit         : '4.13',
+        springtest    : '5.2.5.RELEASE'
 ]
 
 configurations {
@@ -112,6 +112,8 @@ artifactoryPublish.dependsOn('clean','publishToMavenLocal')
 rat {
     // List of exclude directives, defaults to ['**/.gradle/**']
     excludes = [
+            ".project",
+            ".settings/**",
             ".idea/**",
             ".gradle/**",
             "gradle/**",
@@ -122,5 +124,4 @@ rat {
             "src/test/resources/.salt",
             "src/test/resources/.secret"
     ]
-    plainOutput = true
 }
