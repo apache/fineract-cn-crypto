@@ -21,14 +21,14 @@ buildscript {
     }
 
     dependencies {
-        classpath ("io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE")
+        classpath ("io.spring.gradle:dependency-management-plugin:1.0.10.RELEASE")
     }
 }
 
 plugins {
     id 'com.github.hierynomus.license' version '0.15.0'
     id 'org.nosphere.apache.rat' version '0.6.0'
-    id 'com.jfrog.artifactory' version '4.15.1'
+    id 'com.jfrog.artifactory' version '4.18.2'
     id 'maven-publish'
     id 'idea'
     id 'java'
@@ -47,13 +47,13 @@ repositories {
 }
 
 ext.versions = [
-        spring        : '5.2.5.RELEASE',
-        springsecurity: '5.3.1.RELEASE',
+        spring        : '5.3.3',
+        springsecurity: '5.4.2',
         logback       : '1.2.3',
         slf4j         : '1.7.30',
-        findbugs      : '3.0.2',
-        junit         : '4.13',
-        springtest    : '5.2.5.RELEASE'
+        spotbugs      : '4.2.0',
+        junit         : '5.7.0',
+        springtest    : '5.3.3'
 ]
 
 configurations {
@@ -61,15 +61,15 @@ configurations {
 }
 
 dependencies {
-    compile(
+    implementation(
             [group: 'org.springframework', name: 'spring-context', version: versions.spring],
             [group: 'org.springframework.security', name: 'spring-security-core', version: versions.springsecurity],
             [group: 'ch.qos.logback', name: 'logback-classic', version: versions.logback],
             [group: 'org.slf4j', name: 'jcl-over-slf4j', version: versions.slf4j],
-            [group: 'com.google.code.findbugs', name: 'jsr305', version: versions.findbugs]
+            [group: 'com.github.spotbugs', name: 'spotbugs', version: versions.spotbugs]
     )
-    testCompile(
-            [group: 'junit', name: 'junit', version: versions.junit],
+    testImplementation(
+            [group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: versions.junit],
             [group: 'org.springframework', name: 'spring-test', version: versions.springtest]
     )
 }
